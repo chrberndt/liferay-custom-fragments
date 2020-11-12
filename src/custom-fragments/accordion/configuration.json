@@ -3,10 +3,18 @@
     {
       "fields": [
         {
-          "dataType": "object",
-          "label": "text-color",
-          "name": "textColor",
-          "type": "colorPalette"
+          "dataType": "int",
+          "defaultValue": "3",
+          "description": "number-of-panels",
+          "label": "Number Of Panels",
+          "name": "numberOfPanels",
+          "type": "text",
+          "typeOptions": {
+            "validation": {
+              "min": 1,
+              "type": "number"
+            }
+          }
         }
       ]
     }
