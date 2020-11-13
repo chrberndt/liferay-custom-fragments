@@ -1,35 +1,21 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   </h1>
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+    [#list 1..configuration.numberOfSlides as i]
+    <li data-target="#carouselExampleIndicators" data-slide-to="${i-1}" class="[#if i==1]active[/#if]"></li>
+    [/#list]
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect></text></svg>
+    [#list 1..configuration.numberOfSlides as i]
+    <div class="carousel-item [#if i==1]active[/#if]">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Slide #${i}"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect></text></svg>
       <div class="carousel-caption">
         <h1
           class="display-1 [#if configuration.textColor.color?has_content]text-${configuration.textColor.color}[/#if]"
-        >First Slide</h1>
+        >Slide #${i}</h1>
       </div>
     </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect>></svg>
-      <div class="carousel-caption">
-        <h1
-          class="display-1 [#if configuration.textColor.color?has_content]text-${configuration.textColor.color}[/#if]"
-        >Second Slide</h1>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect>></svg>
-      <div class="carousel-caption">
-        <h1
-          class="display-1 [#if configuration.textColor.color?has_content]text-${configuration.textColor.color}[/#if]"
-        >Third Slide</h1>
-      </div>
-    </div>
+    [/#list]
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
