@@ -1,0 +1,30 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "height",
+          "label": "Height",
+          "description": "Height of the keyvisual",
+          "type": "text",
+          "typeOptions": {
+            "placeholder": "Placeholder"
+          },
+          "dataType": "string",
+          "defaultValue": "75vh"
+        },
+        {
+          "name": "width",
+          "label": "Width",
+          "description": "Width of the keyvisual",
+          "type": "text",
+          "typeOptions": {
+            "placeholder": "Placeholder"
+          },
+          "dataType": "string",
+          "defaultValue": "100%"
+        }
+      ]
+    }
+  ]
+}
