@@ -14,16 +14,21 @@
           "defaultValue": "75vh"
         },
         {
-          "name": "width",
-          "label": "Width",
-          "description": "Width of the keyvisual",
-          "type": "text",
-          "typeOptions": {
-            "placeholder": "Placeholder"
-          },
+          "name": "brightness",
+          "label": "Brightness",
+          "description": "brightness",
+          "type": "select",
           "dataType": "string",
-          "defaultValue": "100%"
-        }
+          "typeOptions": {
+            "validValues": [
+              {"value": "100%"},
+              {"value": "75%"},
+              {"value": "50%"},
+              {"value": "25%"}
+            ]
+          },
+          "defaultValue": "75%"
+         }
       ]
     }
   ]

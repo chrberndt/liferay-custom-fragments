@@ -3,8 +3,6 @@
 }
 
 .keyvisual img {
-  filter: brightness(75%);
-  height: 75vh;
   width: 100%;
   object-fit: cover;
 }

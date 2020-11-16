@@ -1,3 +1,10 @@
+<style>
+  .keyvisual img {
+    [#if configuration.height?has_content]height: ${configuration.height};[/#if]
+    [#if configuration.brightness?has_content]filter: brightness(${configuration.brightness});[/#if]
+  }
+</style>
+
 <div class="keyvisual">
   <img
     data-lfr-editable-id="keyvisual"
