@@ -1,5 +1,19 @@
+.keyvisual {
+  position: relative;
+}
+
 .keyvisual img {
+  filter: brightness(75%);
   height: 75vh;
   width: 100%;
   object-fit: cover;
+}
+
+.keyvisual .display-1 {
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 100%;
 }
