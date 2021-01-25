@@ -1,0 +1,33 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "teaser",
+          "label": "Teaser",
+          "description": "Name of the teaser",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {"value": "Default teaser"},
+              {"value": "Teaser #1"},
+              {"value": "Teaser #2"},
+              {"value": "Teaser #3"}
+            ]
+          },
+          "defaultValue": "Default teaser"
+         }, 
+				 {
+					"label": "select-content",
+					"name": "contentSelector",
+					"type": "itemSelector",
+					"typeOptions": {
+            "itemType" : "com.liferay.journal.model.JournalArticle",
+            "enableSelectTemplate": true
+					}
+				}
+      ]
+    }
+  ]
+}

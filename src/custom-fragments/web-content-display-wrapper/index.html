@@ -1,0 +1,11 @@
+Teaser: [#if configuration.teaser?has_content]${configuration.teaser}[/#if] <br>
+
+
+
+<div class="wc-display-wrapper">
+  [#if configuration.contentSelector?has_content]
+    [#if configuration.contentSelector.content??]
+      ${configuration.contentSelector.content}
+    [/#if]
+  [/#if]
+</div>
